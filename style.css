@@ -1,0 +1,42 @@
+#cor{
+    background-color:#0fa36b;
+}
+.center{
+    margin-top: 120px;top:0;
+    text-align: center;
+}
+img#centro{
+    border-radius: 200px;
+    display: block;
+    margin-right: auto;
+    box-shadow: 40px 40px 40px black;
+    margin-top:120px;top:0
+}
+.tamanho{
+    font-family: monospace;
+    font-size: 40px;
+}
+#branco{
+    background-color: white;
+    position: fixed;margin-top:0;top:0;left:0;margin-left:0;width:100%;min-width: 1116px;
+}
+nav#menu ul{
+    list-style: none;
+    text-transform: uppercase;
+    margin-left: auto;
+    margin-right: auto;
+}
+nav#menu li{
+    display: inline-block;
+    margin-left: 10px;left: 0;
+}
+nav#esquerda{
+    display: inline-block;
+    display: block;
+    margin-left: 20px;  
+}
+#mover{
+    position: fixed;
+    top: 120px;
+    left:350px;
+}
