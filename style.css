@@ -1,8 +1,7 @@
 #cor{
     background-color:#0fa36b;
 }
-.center{
-    margin-top: 120px;top:0;
+.center{ 
     text-align: center;
 }
 img#centro{
@@ -10,7 +9,8 @@ img#centro{
     display: block;
     margin-right: auto;
     box-shadow: 40px 40px 40px black;
-    margin-top:120px;top:0
+    margin-top:120px;
+    margin-bottom:100px;
 }
 .tamanho{
     font-family: monospace;
@@ -18,7 +18,8 @@ img#centro{
 }
 #branco{
     background-color: white;
-    position: fixed;margin-top:0;top:0;left:0;margin-left:0;width:100%;min-width: 1116px;
+    position: fixed;margin-top:0;top:0;left:0;margin-left:0;width:100%;
+    z-index: 1;
 }
 nav#menu ul{
     list-style: none;
@@ -28,15 +29,28 @@ nav#menu ul{
 }
 nav#menu li{
     display: inline-block;
-    margin-left: 10px;left: 0;
+    margin-left: 50px;left: 0;
 }
 nav#esquerda{
     display: inline-block;
-    display: block;
-    margin-left: 20px;  
+    margin-left: 20px;
 }
 #mover{
-    position: fixed;
+    position: absolute;
     top: 120px;
     left:350px;
+    width:100%;
+}
+#sobre{
+    display: block;
+    background-color: #5DE8CF;
+    position: absolute; width:100%;min-width: 1116px;
+    padding: 80px;
+}
+#habilidades{
+    display: block;
+    background-color: #73FDFF;
+    position: absolute; width:100%;min-width: 1116px;
+    padding: 80px;
+    top: 849px;
 }
