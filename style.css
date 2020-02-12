@@ -3,6 +3,9 @@
 }
 .center{ 
     text-align: center;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
 }
 img#centro{
     border-radius: 200px;
@@ -44,13 +47,55 @@ nav#esquerda{
 #sobre{
     display: block;
     background-color: #5DE8CF;
-    position: absolute; width:100%;min-width: 1116px;
+    position: absolute; width:100%;
     padding: 80px;
+    left:0;margin-left:0;
+    right:0;margin-right:0;
 }
 #habilidades{
     display: block;
     background-color: #73FDFF;
-    position: absolute; width:100%;min-width: 1116px;
+    position: absolute; width:100%;
     padding: 80px;
     top: 849px;
+    left:0;margin-left:0;
+    right:0;margin-right:0;
+}
+#como-me-encontrar{
+    display: block;
+    background-color: #0FA36B;
+    position: absolute; width:100%;
+    padding: 80px;
+    top: 1200px;
+    left:0;margin-left:0;
+    right:0;margin-right:0;
+}
+#dados-de-contato{
+    display: block;
+    background-color: #5DE8CF;
+    position: absolute; width:100%;
+    padding: 80px;
+    top: 1600px;
+    left:0;margin-left:0;
+    right:100%;margin-right:0;
+}
+#dados-de-contato{
+    display: block;
+    background-color: #73FDFF;
+    position: absolute; width:100%;
+    padding: 80px;
+    top: 1600px;
+    left:0;margin-left:0;
+    right:100%;margin-right:0;
+}
+#trabalho{
+    display: block;
+    background-color: white;
+    position: absolute; width:100%;
+    padding: 80px;
+    top: 1929px;
+    left:0;margin-left:0;
+    right:100%;margin-right:0;
+    height: 250px;
+    overflow: scroll;
 }
