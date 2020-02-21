@@ -1,0 +1,44 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <div id="pai">
+        <div id="primeiroFilho"></div>
+        <div id="elementoOndeVoceEsta">
+            <div id="primeiroFilhoDoFilho"></div>
+            <div id="segundoEUltimoFilhoDoFilho"></div>
+        </div>
+        <div id="terceiroFilho"></div>
+        <div id="quartoEUltimoFilho"></div>
+    </div>
+    <script>
+        let pai= document.querySelector("#elementoOndeVoceEsta")
+        console.log(pai.parentNode)
+        console.log(pai)
+        pai.style.backgroundColor="blue"
+        console.log(pai.firstChild)
+        console.log(pai.nextSibling)
+        console.log(document.getElementById("primeiroFilhoDoFilho").innerHTML="ola")
+        console.log(pai.firstChild)
+
+        let irmao=document.createElement("div")
+        irmao.innerHTML="teste"
+        document.querySelector("#pai").appendChild(irmao)
+        let filho= document.createElement("div")
+        filho.innerHTML="abc"
+        pai.appendChild(filho)
+        let filhao=document.querySelector("#primeiroFilhoDoFilho")
+        let miniFilho= document.createElement("section")
+        miniFilho.innerHTML="filhao"   
+        filhao.appendChild(miniFilho)
+        filhao.parentNode.nextSibling
+        
+    </script>
+</body>
+</html>
