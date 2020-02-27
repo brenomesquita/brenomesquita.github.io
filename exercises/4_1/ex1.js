@@ -6,6 +6,6 @@ function sum() {
     return a + b;}else{
     return a - b;
 }}
-  console.log(sum(a,b,c))
+  console.log(sum())
 //function men(){
 //

@@ -77,20 +77,17 @@
      let tagDiv3= document.createElement("div")
      document.getElementsByClassName("main-content")[0].appendChild(tagDiv3)
      tagDiv3.className="left-content"
-     let rm=document.getElementsByClassName("left-content")[0]
-    
 
      let tagDiv4= document.createElement("div")
      document.getElementsByClassName("center-content")[0].appendChild(tagDiv4)
      tagDiv4.className="right-content"
-     tagDiv4.style.marginRight="auto"
-
+     
 
      let imag= document.createElement("img")
      document.getElementsByClassName("left-content")[0].appendChild(imag)
      imag.className="right-content"
      imag.src="https://picsum.photos/200"
-
+     
      let lista= document.createElement("ul")
      document.getElementsByClassName("right-content")[0].appendChild(lista)
      lista.className="list"
@@ -100,16 +97,20 @@
         let l= document.createElement("li")
         document.getElementsByTagName("ul")[0].appendChild(l).innerHTML= list[i];
      }
-     for(let lis=9; lis>7;lis --){
-        let lRm= document.getElementsByTagName("ul")[0].removeChild(lis).innerHTML=lis[list] ;
-     }
-
+    
      let tres=3
-     for(let zero=0;zero<tres; zero++ ){
+     for(let zero=0;zero<3; zero++ ){
      let agaTres= document.createElement("h3")
      document.getElementsByClassName("main-content")[0].appendChild(agaTres)
      agaTres.className="description"
      }
+
+     for(let lis=9; lis>7;lis --){
+      let li= document.getElementsByTagName("li")[lis]
+      let lRm= document.getElementsByClassName("list")[0].removeChild(li);
+     }
+     let rm=document.getElementsByClassName("main-content")[0]
+     //rm.removeChild()
     </script>
   </body>
 </html>
