@@ -11,12 +11,12 @@
   </label>
   <button id="square-button">Calculate</button>
   <br><br>
-  
+
   <label>Half this number:
     <input type="number" id="half-input" size="2">
   </label>
   <button id="half-button">Calculate</button>
-  <br><br>
+  <br ><br>
   
   <label>
     Fraction:
@@ -34,11 +34,60 @@
   </label>
   <button id="area-button">Calculate</button> 
   <br><br>
-  <div id="solution"></div>
+  <div id="solution">
+    <p id="result1"></p>
+    <p id="result2"></p>
+    <p id="result3"></p>
+  </div>
   <script>
   window.onload= function(){
-      
+      function squareNumber() {
+      let CalculateNum= document.getElementById("square-input").value
+      let result1= document.getElementById("result1")
+      let squaredNumber = CalculateNum * CalculateNum;
+      result1.innerText='The result of squaring the number ' + CalculateNum + ' is ' + squaredNumber;
+      return squaredNumber;
   }
+  const squareNum=document.getElementById("square-button")
+  squareNum.addEventListener("click",squareNumber);
+
+
+  function halfOf() {
+      let CalculateHalf= document.getElementById("half-input").value
+      let half = CalculateHalf / 2;
+      let result2= document.getElementById("result2")
+      result2.innerText=('Half of ' + CalculateHalf + ' is ' +  half);
+      return half;
+  }
+  const halfNum=document.getElementById("half-button")
+  halfNum.addEventListener("click",halfOf);
+
+
+  function percentOf(num1, num2) {
+      var percent = (num1/num2) * 100;
+      console.log(num1 + ' is ' + percent + '% of ' + num2);
+      return percent;
+  }
+  const percent=document.getElementById("half-button")
+  percent.addEventListener("click",percentOf);
+
+  function areaOfCircle(radius) {
+      var area = Math.PI * squareNumber(radius);
+      console.log('The area of circle with radius ' + radius + ' is ' + area);
+      return area;
+  }
+
+  areaOfCircle(2);
+
+  function doCrazyStuff(num) {
+      var half    = halfOf(num);
+      var squared = squareNumber(half);
+      var area    = areaOfCircle(squared);
+      var result  = percentOf(squared, area);
+  }
+
+  doCrazyStuff(5);
+    }
   </script>
   
 </body>

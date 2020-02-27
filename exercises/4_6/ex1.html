@@ -14,21 +14,20 @@
   <li>Someone's Name: <input type="text" id="person">
  </ul>
  
- <button id="lib-button">Lib it!</button>
+ <button id="lib-button">Clique</button>
   
  <div id="story"></div>
   <script>
   window.onload=function(){
-    function libIt(){
-    let noun= document.getElementById("noun").value;
-    let adj= document.getElementById("adjective").value;
-    let nam= document.getElementById("person").value;
-    let P= document.getElementById("story")
-
-    P.innerHTML=nam+" really "+noun+" "+adj;
-  }
-  var makeMadLib = document.getElementById('lib-button');
-  makeMadLib.addEventListener('click', libIt);
+    function clicar(){
+    const nome= document.getElementById("noun").value
+    const adjetivo= document.getElementById("adjective").value
+    const pessoa= document.getElementById("person").value
+    const historia= document.getElementById("story")
+    historia.innerText=nome+" "+adjetivo+" "+pessoa
+    }
+    const noClique=document.getElementById("lib-button")
+    noClique.addEventListener("click",clicar)
   }
  
   </script>
