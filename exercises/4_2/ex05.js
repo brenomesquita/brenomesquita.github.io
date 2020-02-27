@@ -1,0 +1,16 @@
+let x=3
+let a=""
+let ar=[] 
+for (let n=0; n<=x; n+=1) {
+    ar[n]= " "
+}    
+for  (let n=x; n>=0; n-=1){
+
+   ar[n]+="*"  
+  console.log(ar.join(""))
+  for(let n=x; n>=0; n-=1){
+    ar[n]+=" "  
+    console.log(ar.join(""))
+    break;
+  }
+}

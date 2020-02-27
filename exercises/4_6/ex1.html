@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <meta charset="utf-8" />
+  <title></title>
+ </head>
+ <body>
+ 
+ <h1>Mad Libs</h1>
+ 
+ <ul>
+  <li>Noun: <input type="text" id="noun">
+  <li>Adjective: <input type="text" id="adjective">
+  <li>Someone's Name: <input type="text" id="person">
+ </ul>
+ 
+ <button id="lib-button">Lib it!</button>
+  
+ <div id="story"></div>
+  <script>
+  window.onload=function(){
+    function libIt(){
+    let noun= document.getElementById("noun").value;
+    let adj= document.getElementById("adjective").value;
+    let nam= document.getElementById("person").value;
+    let P= document.getElementById("story")
+
+    P.innerHTML=nam+" really "+noun+" "+adj;
+  }
+  var makeMadLib = document.getElementById('lib-button');
+  makeMadLib.addEventListener('click', libIt);
+  }
+ 
+  </script>
+ </body>
+</html>

@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Exercício 4.5</title>
+    <style>
+      div {
+        border-color: black;
+        border-style: solid;
+      }
+      .title {
+        text-align: center;
+      }
+
+      .main-content {
+        background-color: yellow;
+      }
+
+      .main-content .center-content {
+        background-color: red;
+        width: 50%;
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      .main-content .center-content p {
+        font-style: italic;
+      }
+
+      .main-content .left-content {
+        background-color: green;
+        width: 60%;
+        margin-left: 0;
+        margin-right: auto;
+      }
+
+      .main-content .left-content .small-image {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        border-radius: 100%;
+      }
+
+      .main-content .right-content {
+        background-color: blue;
+        width: 60%;
+        margin-left: auto;
+        margin-right: 0;
+      }
+
+      .main-content .description {
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <script>
+     let agaUm= document.createElement("h1")
+     agaUm.innerHTML= "Exercício 4.5 - JavaScript DOM"
+     document.body.appendChild(agaUm)
+     agaUm.className="title"
+
+     let tagDiv= document.createElement("div")
+     tagDiv.className="main-content"
+     document.body.appendChild(tagDiv)
+        
+     let tagDiv2= document.createElement("div")
+     document.getElementsByClassName("main-content")[0].appendChild(tagDiv2)
+     tagDiv2.className="center-content"
+     tagDiv2.style.background="blue"
+
+     let tagp= document.createElement("p")
+     document.getElementsByClassName("center-content")[0].appendChild(tagp)
+     document.getElementsByClassName("center-content")[0].innerHTML="Algum texto"
+
+     let tagDiv3= document.createElement("div")
+     document.getElementsByClassName("main-content")[0].appendChild(tagDiv3)
+     tagDiv3.className="left-content"
+
+     let tagDiv4= document.createElement("div")
+     document.getElementsByClassName("center-content")[0].appendChild(tagDiv4)
+     tagDiv4.className="right-content"
+     
+
+     let imag= document.createElement("img")
+     document.getElementsByClassName("left-content")[0].appendChild(imag)
+     imag.className="right-content"
+     imag.src="https://picsum.photos/200"
+     
+     let lista= document.createElement("ul")
+     document.getElementsByClassName("right-content")[0].appendChild(lista)
+     lista.className="list"
+
+     let list= ["Um", "dois", "tres", "quatro", "cinco", "seis", "sete", "oito", "nove", "dez"]
+     for(i in list){
+        let l= document.createElement("li")
+        document.getElementsByTagName("ul")[0].appendChild(l).innerHTML= list[i];
+     }
+    
+     let tres=3
+     for(let zero=0;zero<3; zero++ ){
+     let agaTres= document.createElement("h3")
+     document.getElementsByClassName("main-content")[0].appendChild(agaTres)
+     agaTres.className="description"
+     }
+
+     for(let lis=9; lis>7;lis --){
+      let li= document.getElementsByTagName("li")[lis]
+      let lRm= document.getElementsByClassName("list")[0].removeChild(li);
+     }
+     let rm=document.getElementsByClassName("main-content")[0]
+     //rm.removeChild()
+    </script>
+  </body>
+</html>
