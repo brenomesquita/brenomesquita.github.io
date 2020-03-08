@@ -23,7 +23,13 @@
 .alinhar{
     display: inline;
     margin: 0 5px;
-    
+    display: flex;
+    float: right;
+    right: 0px;
+}
+
+.alinhar2{
+    display: inline-block;
 }
 
 #menu{
@@ -47,28 +53,21 @@
     display: block;
     padding:5px;
     margin-top: 5px;
-    
 }
 
 #dentro{
     display: flex;
 }
 
-#direito{
-    display: flex;
-    
-}
-
 #espaco{
     padding-top: 50px;
-
 }
 
 #mover{
     padding-top: 30px;
     text-align: center;
     padding-bottom: 30px;
-    padding-bottom: 156px;
+    padding-bottom: 65px;
 }
 
 .botao{
@@ -119,13 +118,26 @@ h1{
     padding: 30px;
     border-radius: 60px;
 }
+
 .bla{
     float: right;
+    border-radius: 10px;
+    height: 200px;
+    width: 200px;
 }
+
 .center{
     display: block;
     margin-left:auto;
     margin-right: auto;
     text-align: center;
+}
+
+.ladoaAlado{
+    display: inline-block;
+}
+
+.direita{
+    float: right;
 }
 
