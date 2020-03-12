@@ -16,19 +16,18 @@ window.onload=function(){
     "Pará (PA)" ]
     for(let z in tdsEstados){
         let cria=document.createElement("option")
-        cria.classList.add("cria")
         cria.innerText= tdsEstados[z]
         estado.appendChild(cria)
     }
 
-    let ev=document.getElementById("resultado")
-    let get= document.getElementById("get").value
-    function stopDefAction() {
-        ev.preventDefault();
-        let dados= document.getElementById("dados")
-        dados.innerText=get
-    }
-    ev.addEventListener("click", stopDefAction)
+    //let ev=document.getElementById("resultado")
+    //let get= document.getElementById("get").value
+    //function stopDefAction() {
+    //    ev.preventDefault();
+    //    let dados= document.getElementById("dados")
+    //    dados.innerText=get
+    //}
+    //ev.addEventListener("click", stopDefAction)
 
     //let ev=document.getElementById("resultado")
     //let get= document.getElementById("get").value
