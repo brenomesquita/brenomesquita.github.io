@@ -1,0 +1,37 @@
+body {
+  margin: 10px;
+}
+h1 {
+ font-size: 10px;
+}
+h2 {
+
+}
+
+img {
+    display: flex;
+    max-width: 100%;
+    margin: 10px;
+}
+
+figure {
+	margin: 0;
+}
+
+@media screen and (min-width:1000px){
+    body{
+        background-color: blue;
+    }
+    h1{
+        font-size: 50px;
+    }
+    body{
+        margin: 100px;
+    }
+    section{
+        display: flex;
+        flex-direction: row;
+        max-width: 90%;
+        flex-wrap: nowrap;
+    }
+}
