@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+    img{
+      display: flex;
+      height: 200px;
+      margin: 10px;
+      position: relative;
+    }
+
+    ul{
+      display: flex;
+      max-width: 1200px;
+      flex-wrap: wrap;
+    }
+
+    .girar:hover{
+      -webkit-animation: rotation 2s infinite linear;
+    }
+
+    @keyframes rotation{
+      from{
+        -webkit-transform: rotate(0deg);
+      }to{
+        -webkit-transform: rotate(359deg);
+      }
+    }
+
+    .zoom:hover{
+      -webkit-animation: zoom 2s infinite linear;
+    }
+
+    @keyframes zoom{
+      from{
+        height: 10%;
+        width: 10%;
+      }to{
+        height: 20%;
+        width: 20%;
+      }
+    }
+  </style>
+</head>
+<body>
+  <img src="cartas/verso-da-carta.png" alt="verso da carta">
+  <h1 id="cliques"></h1>
+  <ul alt="cartas aleatorias"></ul>
+
+</body>
+<script>
+imagesArray = ["cartas/cinco-de-ouros.png",
+"cartas/nove-de-espadas.png",
+"cartas/quatro-de-paus.png",
+"cartas/seis-de-copas.png",
+"cartas/sete-de-espadas.png",
+"cartas/sete-de-paus.png",
+"cartas/tres-de-ouros.png",
+"cartas/verso-da-carta.png"]
+let count=0
+document.getElementsByTagName("img")[0].addEventListener("click", () => {
+  let cartaCriada= document.createElement("img")
+  cartaCriada.classList.add("cartas");
+  cartaCriada.src= imagesArray[Math.floor(Math.random()*7)];
+  animacaoArray=["girar", "zoom"];
+  cartaCriada.classList.add(animacaoArray[Math.floor(Math.random()*animacaoArray.length)])
+  document.getElementsByTagName("ul")[0].appendChild(cartaCriada);
+  count++;
+  document.getElementById("cliques").innerText=`Você gerou ${count} cartas`;
+})
+</script>
+</html>
