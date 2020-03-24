@@ -17,6 +17,7 @@ const lesson3 = {
   professor: 'Maria Clara',
   turno: 'noite',
 };
+
 console.log("____________________________________________________________________ex1")
 adicionarManha = (manha) =>{
   let turno = 'turno'
@@ -66,5 +67,16 @@ getValueByNumber = (param, i) =>  {
   return o
 }
 console.log(getValueByNumber(lesson1, 0));
-    
 
+
+console.log("____________________________________________________________________ex8")
+verifyPair = (lessions, key, value) =>{
+  let obj = Object.entries(lessions);
+  let chave = (lessions[value]=key)
+  let chaveOriginal = (obj[3][0])
+  let valor = (lessions[key]=value)
+  let valorOriginal = (obj[3][1])
+  chaveOriginal == chave && valorOriginal == valor ? console.log(true) : console.log(false)
+}
+verifyPair(lesson3, 'turno', 'noite');
+verifyPair(lesson3, 'materia', 'Maria Clara')
