@@ -19,13 +19,13 @@ const lesson3 = {
 };
 
 console.log("____________________________________________________________________ex1")
-adicionarManha = (manha) =>{
-  let turno = 'turno'
-  let varManha= 'manhã'
+let turno = 'turno'
+let varManha= 'manhã'
+adicionarManha = (manha, turno, varManha) =>{
   manha[turno] = varManha
   console.log(manha)
 }
-adicionarManha(lesson2)
+adicionarManha(lesson2,  turno, varManha)
 
 
 console.log("____________________________________________________________________ex2")
@@ -33,9 +33,6 @@ listarKeys = (keys) =>{
   console.log(Object.keys(keys))
 }
 listarKeys(lesson1)
-listarKeys(lesson2)
-listarKeys(lesson3)
-
 
 console.log("____________________________________________________________________ex3")
 tamanhoObj = (tamanho) =>{
@@ -72,11 +69,7 @@ console.log(getValueByNumber(lesson1, 0));
 console.log("____________________________________________________________________ex8")
 verifyPair = (lessions, key, value) =>{
   let obj = Object.entries(lessions);
-  let chave = (lessions[value]=key)
-  let chaveOriginal = (obj[3][0])
-  let valor = (lessions[key]=value)
-  let valorOriginal = (obj[3][1])
-  chaveOriginal == chave && valorOriginal == valor ? console.log(true) : console.log(false)
+  obj[3][0] == (lessions[value]=key) && obj[3][1] == (lessions[key]=value) ? console.log(true) : console.log(false)
 }
 verifyPair(lesson3, 'turno', 'noite');
 verifyPair(lesson3, 'materia', 'Maria Clara')

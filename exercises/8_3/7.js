@@ -1,6 +1,6 @@
 const assert = require('assert');
 
-const thereIs = '';
+const thereIs = 
 
 // implemente seus testes aqui
 assert(thereIs !== undefined)

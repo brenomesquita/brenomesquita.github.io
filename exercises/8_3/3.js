@@ -10,5 +10,5 @@ function mySum(arr) {
 
 // implemente seus testes aqui
 assert(mySum([1, 2, 3, 4]) === 10, "não é 10")
-assert((mySum([1, -2, -3, 4]) === 10), "não é 0")
+assert(mySum([1, -2, -3, 4]) === 0, "não é 0")
 
