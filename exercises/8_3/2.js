@@ -12,5 +12,5 @@ function myIndexOf(arr, item) {
 
 
 // implemente seus testes aqui
-assert.equal(myIndexOf([1, 2, 3, 4], 3), [-1, -1, 3, -1], "erro")
-assert.equal(myIndexOf([1, 2, 3, 4], 5), [-1, -1, -1, -1], "erro")
+assert.deepEqual(myIndexOf([1, 2, 3, 4], 3), [-1, -1, 3, -1], "erro")
+assert.deepEqual(myIndexOf([1, 2, 3, 4], 5), [-1, -1, -1, -1], "erro")
