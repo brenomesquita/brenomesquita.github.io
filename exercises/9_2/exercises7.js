@@ -89,7 +89,7 @@ const expected_result = [
     author: 'J. R. R. Tolkien'
   }
 ];
-const idadeLancamento = element=> `{${element.author.name}, ${element.releaseYear - element.author.birthYear}}`
+const idadeLancamento = element=> `{age: ${element.releaseYear - element.author.birthYear} , author: ${element.author.name}}`
 nameAndAge = (nomeIdade) => nomeIdade.map(idadeLancamento)
-
+console.log(nameAndAge(books).sort((a,b) => a.releaseYear += b.releaseYear));
 assert.deepEqual(nameAndAge(books), expected_result);
