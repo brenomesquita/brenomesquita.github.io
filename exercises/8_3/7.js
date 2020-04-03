@@ -1,6 +1,4 @@
-const assert = require('assert');
-
-const thereIs = 
+const thereIs7 = 
 
 // implemente seus testes aqui
-assert(thereIs !== undefined)
+module.exports = thereIs7

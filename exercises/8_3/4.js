@@ -1,5 +1,3 @@
-const assert = require('assert');
-
 function myRemove(arr, item) {
   let newArr = [];
   for (let i = 0; i < arr.length; i += 1) {
@@ -10,8 +8,4 @@ function myRemove(arr, item) {
   return newArr;
 };
 
-// implemente seus testes aqui
-assert.deepEqual(myRemove([1, 2, 3, 4], 3), [ 1, 2, 4 ],'não esperado')
-assert.notDeepEqual(myRemove([1, 2, 3, 4], 3), [ 1, 2, 3, 4 ],'não esperado1.2')
-assert.notDeepEqual([ 1, 2, 3, 4 ], myRemove([1, 2, 3, 4], 3))
-assert.deepEqual(myRemove([1, 2, 3, 4], 5), [ 1, 2, 3, 4 ],'não esperado2.2')
+module.exports = myRemove
