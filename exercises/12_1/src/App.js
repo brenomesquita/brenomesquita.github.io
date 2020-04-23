@@ -1,26 +1,21 @@
 import React from 'react';
-import logo from './logo.svg';
+
 import './App.css';
-
+import { logDOM } from '@testing-library/react';
+import logo from './logo.svg'
+const lista = ["React", "JavaScript", "Jest", "CSS"];
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+      return (
+        <div className='App-header'>
+        <ul>
+          {lista.map(e=><li>
+            <button onClick={() => alert(e.length)}>{e}</button>
+            </li>)}
+        
+        </ul>
+        <img src={logo} className='App-logo'/>
+        </div>
+        
+      );
 }
-
 export default App;
