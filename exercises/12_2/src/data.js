@@ -98,17 +98,6 @@ const pokemons = [
       image: "https://cdn.bulbagarden.net/upload/2/2c/Spr_5b_148.png",
       moreInfo: "https://bulbapedia.bulbagarden.net/wiki/Dragonair_(Pok%C3%A9mon)"
   },
-  {
-    id: 148,
-    name: "Dragonair",
-    type: 'Dragon',
-    averageWeight: {
-        value: "16.5",
-        measurementUnit: "kg"
-    },
-    image: "https://cdn.bulbagarden.net/upload/2/2c/Spr_5b_148.png",
-    moreInfo: "https://bulbapedia.bulbagarden.net/wiki/Dragonair_(Pok%C3%A9mon)"
-}
 ];
 
 export default pokemons;
