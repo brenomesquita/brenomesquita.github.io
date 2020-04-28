@@ -58,8 +58,7 @@ class App extends React.Component {
               key={type}
               onClick={()=>this.updateFilterState(type)}
               label={type}
-            />
-          ))}
+            />))}
         </div>
         <PokemonsButton 
         onClick={()=>this.clique(filteredPokemons.length)}
