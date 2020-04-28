@@ -1,15 +1,13 @@
 import React from 'react';
-import App from './App'
 
 
-class PokemonsButton extends React.Component{
-  render(){
-    return(
-      <div>
-      <button>{this.props.texto}</button>
-      </div>
-    );
-  }
-}
-
+const PokemonsButton = ({ className, label, disabled, onClick }) => (
+  <button
+    onClick={onClick}
+    className={`button-text ${className}`}
+    disabled={disabled}
+  >
+    {label}
+  </button>
+);
 export default PokemonsButton;
