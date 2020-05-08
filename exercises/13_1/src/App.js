@@ -3,6 +3,11 @@ import './App.css';
 import pokemon from './data'
 import DisplayPokemons from './DisplayPokemons';
 import PokemonsButton from './PokemonsButton';
+import { BrowserRouter , Link, Route, Switch } from 'react-router-dom';
+import PokemonDetails from './PokemonDetails';
+import About from './About';
+import LinksHeader from './LinksHeader';
+import DontMatch from './DontMatch';
 
 class App extends React.Component { 
   constructor(){
@@ -42,10 +47,21 @@ class App extends React.Component {
   render(){
     const map = this.test()
     const filteredPokemons = this.fetchFilteredPokemons();
-    console.log(this.state.type)
     return (
       <div className='App'>
-        <DisplayPokemons pokemDisplay={filteredPokemons[this.state.pokemonIndex]} />
+        <BrowserRouter>
+        <Switch>
+          <Route exact path='/'render={()=> <DisplayPokemons pokemDisplay={filteredPokemons[this.state.pokemonIndex]} />} />
+          <Route exact path='/pokemons/:id'
+          render={ () =>
+            <PokemonDetails
+            pokemDisplay={filteredPokemons[this.state.pokemonIndex]}
+            />}
+          />
+          <Route path='/About' component={About} />
+          <Route component={DontMatch} />
+        </Switch>
+        </BrowserRouter>
         <div className="selector-button-container">
         <PokemonsButton
               className="select-type"
