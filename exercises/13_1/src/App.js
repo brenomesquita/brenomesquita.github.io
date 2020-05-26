@@ -3,10 +3,9 @@ import './App.css';
 import pokemon from './data'
 import DisplayPokemons from './DisplayPokemons';
 import PokemonsButton from './PokemonsButton';
-import { BrowserRouter , Link, Route, Switch } from 'react-router-dom';
+import { BrowserRouter , Route, Switch } from 'react-router-dom';
 import PokemonDetails from './PokemonDetails';
 import About from './About';
-import LinksHeader from './LinksHeader';
 import DontMatch from './DontMatch';
 
 class App extends React.Component { 
