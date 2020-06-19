@@ -1,9 +1,14 @@
 import React from 'react';
+import Button from './components/Button';
+import Counter from './components/Counter';
+import Inputs from './components/Inputs';
 
 function App() {
   return (
     <div>
-      ok
+      <Counter />
+      <Button />
+      <Inputs />
     </div>
   );
 }

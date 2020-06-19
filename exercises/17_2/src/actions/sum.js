@@ -1,0 +1,1 @@
+export const countAssignment = (value) => ({ type: 'COUNT_ELEMENT', value });
