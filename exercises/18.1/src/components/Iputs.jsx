@@ -1,13 +1,13 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { SuperContext } from "../context/SuperContext";
 
 function Iputs() {
+  const {numOne, sum1, numTwo, sum2} = useContext(SuperContext)
     return (
-      <SuperContext.Consumer>{({numOne, sum1, numtwo, sum2}) =>
-        (<div>
+      <div>
         <p>
         <input type="number" onChange={sum1}></input>
-        {Number(numOne)+Number(numtwo)}
+        {Number(numOne.numOne)+Number(numTwo.numTwo)}
         </p>
         <p>
         <input type="number" onChange={sum2}></input>
@@ -15,9 +15,7 @@ function Iputs() {
         <p>
         <input type="number"></input>
         </p>
-        </div>)}
-      </SuperContext.Consumer>
-    )
+        </div>)
 }
 
 export default Iputs;
